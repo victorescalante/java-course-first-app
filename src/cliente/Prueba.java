@@ -1,17 +1,20 @@
 package cliente;
 
+import java.util.ArrayList;
+
 public class Prueba {
     public static void main(String[] args){
-        Persona[] arrPersonas = new Persona[5];
-        System.out.println("arreglo: "+ arrPersonas[0]);
-        arrPersonas[0] = new Persona();
-        arrPersonas[1] = new Persona();
-        arrPersonas[2] = new Persona();
-        arrPersonas[3] = new Persona();
-        arrPersonas[4] = new Persona();
-        System.out.println("arreglo: "+ arrPersonas[0]);
-        System.out.println("arreglo: "+ arrPersonas[1]);
-        System.out.println("arreglo: "+ arrPersonas[2]);
-        System.out.println("arreglo: "+ arrPersonas[3]);
+        ArrayList<Persona> arrPersonas = new ArrayList<>();
+
+        int num_elements = 5;
+
+        for (int i = 0; i < num_elements; i++){
+            arrPersonas.add(new Persona());
+        }
+
+        for (Persona p : arrPersonas){
+            System.out.println("arreglo: "+ p);
+        }
+
     }
 }
